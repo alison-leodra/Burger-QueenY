@@ -1,0 +1,82 @@
+:root{
+  --orange: #FF6000;
+  --black: rgba(255, 255, 255, 0.04);
+}
+
+*{
+  color: white;
+}
+
+.login-container {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 4em;
+    background:#141414;
+    border: .1px solid gray;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all .25s;
+  }
+  
+  .login-container {
+    text-align: center
+  }
+
+  img{
+    width: 150px;
+  }
+
+  h1{
+    font-size: 24px;
+    font-weight: 400;
+    margin: 2rem 0 2rem;
+  }
+  
+  .field {
+    margin-bottom: 1rem;
+  }
+  
+  .field label {
+    margin-right: 1rem;
+    line-height: 2;
+    text-align: start;
+  }
+  
+  .field input {
+    background: none;
+    border: 1px solid gray;
+    padding: .5rem;
+    border-radius: 8px;
+    width: 100%;
+    color: white;
+  }
+  
+  .error {
+    background: tomato;
+    margin-top: 1rem;
+    line-height: 3;
+    padding: 0.25rem 2rem;
+    border-radius: .25rem;
+  }
+
+  .login-container p{
+    color: rgb(239, 246, 246);
+    font-size: 12px;
+  }
+
+  .link {
+    background: var(--orange);
+    border: 1px solid var(--orange);
+    padding: .7rem;
+    border-radius: 8px;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+  }
+
+  .link:hover{
+    
+    font-size: 16px;
+    border: 1px solid gray;
+    cursor: pointer;
+  }
