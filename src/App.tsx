@@ -6,8 +6,9 @@ import PageWaiters from './components/pages/waiter/PageWaiters';
 function App() {
   return (
     <div className="App">
-    {/* <Login /> */}
-    <PageWaiters />
+      <Login />
+
+      {/* <PageWaiters /> */}
     </div>
   );
 }
