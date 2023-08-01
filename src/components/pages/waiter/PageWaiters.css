@@ -1,0 +1,52 @@
+.container{
+   display: flex;
+   flex-direction: column;
+   padding: 50px 0;
+
+}
+.menuButtons{
+    width: 100%;
+    display: flex;
+   justify-content: center;
+}
+
+.button{
+    background: orange;
+    padding: .5em 1.5em;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    border-radius: 5px;
+    border: solid;
+    margin-right: 25px;  
+}
+
+.button:hover{
+    background: rgba(230, 144, 64, 0.79);
+}
+
+.container-products{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2em;
+    justify-content: center;
+    margin: 2em;
+    text-align: center;
+}
+
+.product img{
+    width: 100px;
+    padding-bottom: 12px;
+}
+
+.product{
+    border: 2px solid gray;
+    border-radius: .8px;
+    padding: 1em;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.product span{
+    padding-left: 15px;
+}
