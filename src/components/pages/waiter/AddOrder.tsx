@@ -1,9 +1,10 @@
+import "./PageWaiters.css"
 const AddOrder = () => {
     return (
         <>
-            <form>
+            <form className="container-cart">
                 <div className="field">
-                    <label>Cliente</label>
+                    <label>CLIENTE</label>
                     <input required
                         type="text"
                         name="customer"
@@ -11,7 +12,7 @@ const AddOrder = () => {
                     />
                 </div>
                 <div className="field">
-                    <label>Mesa</label>
+                    <label>MESA</label>
                     <input required
                         type="text"
                         name="table"
@@ -20,11 +21,29 @@ const AddOrder = () => {
                 </div>
                 <h1>CARRITO</h1>
                 <div className="order-history">
-                    <p></p>
-                    <p></p>
+                    <div className="items">
+                        <p>café con leche</p>
+                        <div className="delete">
+                            <p > $17</p>
+                            <p> X</p>
+                        </div>
+                    </div>
+                    <div className="items">
+                        <p>sandwich</p>
+                        <div className="delete">
+                            <p > $17</p>
+                            <p> X</p>
+                        </div>
+                    </div>
                 </div>
-                <p>TOTAL: $190</p>
-                
+                <p className="total">TOTAL: <span>$190</span></p>
+                <div className="menuButtons">
+                    <input
+                        type="submit"
+                        className="button"
+                        value="ENVIAR A COCINA"
+                    />
+                </div>
             </form>
         </>
     )
