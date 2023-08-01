@@ -1,8 +1,16 @@
 
 import "./PageWaiters.css"
 import product from "../../../images/Group 8(1).png"
+import AddOrder from "./AddOrder"
+import { useState } from "react";
 
 const PageWaiters = () => {
+
+    
+    const [modal, setModal] = useState(false);
+    const Toggle = () => setModal(!modal);
+    {}
+
     return (
         <section className="container">
             <div className="menuButtons">
@@ -34,6 +42,7 @@ const PageWaiters = () => {
             </div>
             <div className="menuButtons">
                 <input
+                    onClick={() => Toggle()}
                     type="submit"
                     className="button"
                     value="VER CARRITO"
