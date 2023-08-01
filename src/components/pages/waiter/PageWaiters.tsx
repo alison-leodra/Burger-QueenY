@@ -6,12 +6,15 @@ import { useState } from "react";
 
 const PageWaiters = () => {
 
+    const [modal, setModal] = useState({open:false})
     
-    const [modal, setModal] = useState(false);
-    const Toggle = () => setModal(!modal);
-    {}
-
+    const showModal = () => {
+        setModal({open:true})
+    }
+  
     return (
+        <>
+        {!modal.open && (
         <section className="container">
             <div className="menuButtons">
                 <button className="button">DESAYUNO</button>
@@ -42,13 +45,16 @@ const PageWaiters = () => {
             </div>
             <div className="menuButtons">
                 <input
-                    onClick={() => Toggle()}
+                    onClick={showModal}
                     type="submit"
                     className="button"
                     value="VER CARRITO"
                 />
-            </div>
+            </div>   
         </section>
+        )} {modal.open && (<AddOrder />)}
+        </>
+        
     )
 }
 

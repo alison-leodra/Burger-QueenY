@@ -1,7 +1,17 @@
+import { useState } from "react"
+
 import "./PageWaiters.css"
+import PageWaiters from "./PageWaiters"
 const AddOrder = () => {
+    const [modal, setModal] = useState({open:true})
+    
+    const viewWaiters = () => {
+        setModal({open:false})
+    }
+
     return (
         <>
+        {modal.open && 
             <form className="container-cart">
                 <div className="field">
                     <label>CLIENTE</label>
@@ -39,12 +49,13 @@ const AddOrder = () => {
                 <p className="total">TOTAL: <span>$190</span></p>
                 <div className="menuButtons">
                     <input
+                        onClick={viewWaiters}
                         type="submit"
                         className="button"
                         value="ENVIAR A COCINA"
                     />
                 </div>
-            </form>
+            </form>}  {!modal.open && (<PageWaiters />)}
         </>
     )
 }
