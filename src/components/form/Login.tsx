@@ -1,6 +1,6 @@
 import "./Login.css"
 import image from "../../images/Group 8(1).png"
-import { useState } from "react"
+import { Children, useState } from "react"
 import axios from "axios"
 
 const Login = () => {
@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault()
     axios.post('http://localhost:8080/login', user)
       .then((data) => {
-        console.log(data.data)
+        console.log(data.status)
         console.log(data.data.user.role)
         localStorage.setItem('tokenUser', data.data.token)
         setErrors({
@@ -32,10 +32,19 @@ const Login = () => {
       })
       .catch((e) => {
         console.error(e)
-        setErrors({
-          email: true,
-          password: true
-        });
+        if (e.response.data === "Cannot find user") {
+          setErrors({
+            email: true,
+            password: false
+          });
+        }
+        else {
+          setErrors({
+            email: false,
+            password: true
+          });
+        }
+
       })
   }
 
@@ -58,7 +67,7 @@ const Login = () => {
               name="email"
             />
             {errors.email && (
-              <p>Correo incorrecto</p>
+              <p id="errorUserEmail">Correo no valido</p>
             )}
           </div>
           <div className="field">
@@ -74,7 +83,7 @@ const Login = () => {
               name="password"
             />
             {errors.password && (
-              <p>Contrasena incorrecta</p>
+              <p id="errorUserPassword">Contrasena incorrecta</p>
             )}
           </div>
           <div className="submit">
@@ -82,7 +91,8 @@ const Login = () => {
               type="submit"
               className="link"
               placeholder="Enviar"
-            />
+              value="Ingresar"
+            ></input>
           </div>
         </form>
 
@@ -91,4 +101,5 @@ const Login = () => {
     </>
   )
 }
+
 export default Login
