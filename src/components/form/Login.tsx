@@ -42,7 +42,7 @@ const Login = () => {
         }
       })
       .catch((e) => {
-        console.error(e)
+        // console.error(e)
         if (e.response.data === "Cannot find user") {
           setErrors({
             email: true,

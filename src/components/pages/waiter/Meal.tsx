@@ -1,5 +1,9 @@
 import product from "../../../images/Group 8(1).png"
 const Meal = () => {
+
+
+
+
     return (
         <section className="container">
             <div className="product">
