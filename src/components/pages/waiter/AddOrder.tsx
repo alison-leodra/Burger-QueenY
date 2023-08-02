@@ -54,6 +54,11 @@ const AddOrder = () => {
                         className="button"
                         value="ENVIAR A COCINA"
                     />
+                     <input
+                    type="submit"
+                    className="button"
+                    value="CANCELAR"
+                />
                 </div>
             </form>}  {!modal.open && (<PageWaiters />)}
         </>
