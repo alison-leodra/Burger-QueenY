@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import PageWaiters from './components/pages/waiter/PageWaiters';
 
 
+
 function App() {
   return (
     <div className="App">

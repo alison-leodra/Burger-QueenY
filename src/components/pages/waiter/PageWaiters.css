@@ -19,7 +19,9 @@
     color: black;
     border-radius: 5px;
     border: solid;
+
     margin-right: 25px;
+
     cursor: pointer;
 }
 
@@ -53,8 +55,10 @@
     padding-left: 15px;
 }
 
+
 /* Component add to order */
 .container-cart {
+
     border: 2px solid gray;
     display: flex;
     flex-direction: column;
@@ -65,14 +69,18 @@
 
 }
 
-.field {
+
+.field{
+
     display: flex;
     flex-direction: column;
     padding: 5px;
     font-size: 15px;
 }
 
-.field input {
+
+.field input{
+
     padding: 8px;
     border-radius: 6px;
     border: none;
@@ -80,40 +88,51 @@
     background: rgb(233, 230, 230);
 }
 
-.container-cart h1 {
+
+.container-cart h1{
+
     font-size: 18px;
     padding: 5px 0 5px;
     margin: 0;
 }
 
-.order-history {
+
+.order-history{
     border-top: 1px solid gray;
     border-bottom: 2px solid gray;
-    margin: 0;
+    margin:  0;
     padding: 35px 20px;
     width: 70%;
-    line-height: 1.7em;
+    line-height: 1.7em; 
     margin-bottom: 15px;
 }
 
-.items {
+.items{
+
     display: flex;
     justify-content: space-between;
 }
 
-.delete {
+
+.delete{
+
     display: flex;
     gap: 20px;
 }
 
-.container-cart .menuButtons {
+
+.container-cart .menuButtons{
+
     margin: 15px;
     margin-left: 40px;
 }
 
-.total {
+.total{
+
     display: flex;
     justify-content: space-between;
     width: 50%;
     font-weight: 600;
+
 }
+

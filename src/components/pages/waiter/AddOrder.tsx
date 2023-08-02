@@ -3,14 +3,17 @@ import { useState } from "react"
 import "./PageWaiters.css"
 import PageWaiters from "./PageWaiters"
 const AddOrder = () => {
+
     const [modal, setModal] = useState({ open: true })
 
     const viewWaiters = () => {
         setModal({ open: false })
+
     }
 
     return (
         <>
+
             {modal.open &&
                 <form className="container-cart">
                     <div className="field">
@@ -56,6 +59,7 @@ const AddOrder = () => {
                         />
                     </div>
                 </form>}  {!modal.open && (<PageWaiters />)}
+
         </>
     )
 }
