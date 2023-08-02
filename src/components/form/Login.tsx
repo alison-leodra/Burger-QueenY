@@ -1,16 +1,18 @@
 import "./Login.css"
 import image from "../../images/Group 8(1).png"
 import { Children, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
 const Login = () => {
+
+
+  const navigate = useNavigate();
 
   const [user, setUser] = useState({
     email: "",
     password: ""
   })
-
-
 
   const [errors, setErrors] = useState({
     email: false,
@@ -29,6 +31,15 @@ const Login = () => {
           email: false,
           password: false
         });
+        if (data.data.user.role === "waiter") {
+          navigate('/mesero');
+        }
+        else if (data.data.user.role === "admin") {
+          console.log("dirigir a pagina mesero");
+        }
+        else {
+          console.log("dirigir pagina chef")
+        }
       })
       .catch((e) => {
         console.error(e)
@@ -83,7 +94,7 @@ const Login = () => {
               name="password"
             />
             {errors.password && (
-              <p id="errorUserPassword">Contrasena incorrecta</p>
+              <p id="errorUserPassword">Contraseña incorrecta</p>
             )}
           </div>
           <div className="submit">
