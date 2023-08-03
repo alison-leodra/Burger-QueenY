@@ -1,9 +1,21 @@
 
 import "./PageWaiters.css"
 import product from "../../../images/Group 8(1).png"
+import AddOrder from "./AddOrder"
+import { useState } from "react";
 
 const PageWaiters = () => {
+
+
+    const [modal, setModal] = useState({open:false})
+    
+    const showModal = () => {
+        setModal({open:true})
+    }
+  
     return (
+        <>
+        {!modal.open && (
         <section className="container">
             <div className="menuButtons">
                 <button className="button">DESAYUNO</button>
@@ -34,12 +46,16 @@ const PageWaiters = () => {
             </div>
             <div className="menuButtons">
                 <input
+                    onClick={showModal}
                     type="submit"
                     className="button"
                     value="VER CARRITO"
                 />
-            </div>
+            </div>   
         </section>
+        )} {modal.open && (<AddOrder />)}
+        </>
+
     )
 }
 
