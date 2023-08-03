@@ -3,6 +3,7 @@ import './App.css';
 import Login from './components/form/Login';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import PageWaiters from './components/pages/waiter/PageWaiters';
+import AddOrder from './components/pages/waiter/AddOrder';
 
 
 
