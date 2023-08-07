@@ -31,6 +31,7 @@ img {
 body {
   background: rgb(16, 15, 15);
   min-height: 98vh;
+  margin: 1.5em;
 }
 
 h1 {

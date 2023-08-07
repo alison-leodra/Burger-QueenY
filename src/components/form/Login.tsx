@@ -26,7 +26,8 @@ const Login = () => {
       .then((data) => {
         console.log(data.status)
         console.log(data.data.user.role)
-        localStorage.setItem('tokenUser', data.data.token)
+        localStorage.setItem('tokenUser', data.data.accessToken)
+        console.log(data)
         setErrors({
           email: false,
           password: false
