@@ -7,7 +7,7 @@ const Product = ({id, name, image, price, type}) => {
             alt={name} 
             id={id}   
             onClick={(e) => {
-                console.log(e.target.id)
+                console.log(e.target.i)
             }}
             />
             <p className="item-product">Producto: {name}
