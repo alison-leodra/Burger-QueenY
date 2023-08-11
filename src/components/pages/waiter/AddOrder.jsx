@@ -12,9 +12,12 @@ const AddOrder = () => {
 
     const [counter, setCounter] = useState(1)
 
-    const showProducts = (e) => {
-        e.preventDefault()
-               console.log(order)
+    const showProducts = () => {
+        setOrder({
+            name: "",
+            table: 0,
+            products: []
+        })
 
     }
     return (
